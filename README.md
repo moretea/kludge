@@ -9,7 +9,7 @@
 
 ## Software
 - [ESPHome configuration](kludges.yaml)
-- [Python script](kludges.py)
+- [Python script](kludge.py)
 
 
 ## Hardware
