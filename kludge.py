@@ -25,10 +25,10 @@ def transition(source, old, new):
             return
         if old == 0  and new > 0.1:
             print("[mic] Unmuting")
-            subprocess.run("amixer set Capture cap", shell=True)
+            subproces.run("pacmd suspend-source alsa_input.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.analog-stereo 0", shell=True)
         elif old > 0  and new == 0:
             print("[mic] Muting")
-            subprocess.run("amixer set Capture nocap", shell=True)
+            subproces.run("pacmd suspend-source alsa_input.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.analog-stereo 1", shell=True)
 
 url = "http://192.168.100.109/events"
 headers = {"Accept": "text/event-stream"}
